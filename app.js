@@ -20,6 +20,10 @@ app.use(morgan("dev"));
 /* Define routes */
 app.use("/api", API_ROUTES);
 
+app.get("/", (req, res) => {
+  res.send(`<h1>Welcome!</h1>`);
+});
+
 /* Error handler middleware */
 app.use(errorHandler);
 app.use(notFoundHandler);
