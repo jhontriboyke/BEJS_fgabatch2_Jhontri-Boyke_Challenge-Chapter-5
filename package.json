@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npm run migrate && node server.js",
     "dev": "nodemon server.js",
     "generate:doc": "swagger-cli bundle ./docs/swagger/index.yaml --outfile ./docs/swagger/index.json",
     "test": "jest",
